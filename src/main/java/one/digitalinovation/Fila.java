@@ -19,11 +19,14 @@ public class Fila {
             No noAuxiliar = refNoEntradaFila;
             while (true){
                 if(primeiroNo.getRefNo() != null) {
+                    NoAuxiliar = primeiroNo;
                     primeiroNo = primeiroNo.getRefNo();
                 }else{
+                    noAuxiliar.setRefNo(null);
                     break;
                 }
             }
+            return primeiroNo;
         }
         return null;
     }
@@ -31,5 +34,24 @@ public class Fila {
     public boolean isEmpty(){
 
         return refNoEntradaFila == null? true : false;
+    }
+
+    @Override
+    public String toString() {
+        String stringRetorno = "";
+        No noAuxiliar = refNoEntradaFila;
+
+        if (refNoEntradaFila != null)
+            while (true) {
+                stringRetorno += "[No{objeto=" + NoAuxiliar.getObject() + "}]--->";
+                if (noAuxiliar.getObject() != null) {
+                    noAuxiliar = noAuxiliar.getRefNo();
+                }else{
+
+                }
+
+            }
+    }else{
+        return stringRetorno;
     }
 }
