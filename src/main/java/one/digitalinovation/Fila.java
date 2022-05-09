@@ -47,9 +47,9 @@ public class Fila {
                 if (noAuxiliar.getObject() != null) {
                     noAuxiliar = noAuxiliar.getRefNo();
                 }else{
-
+                    stringRetorno += "null";
+                    break;
                 }
-
             }
     }else{
         return stringRetorno;
